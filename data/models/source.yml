@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: employe_learning
+    database: FINALPROJECT
+    schema: PUBLIC
+    tables:
+      - name: EVENTS
+      - name: LIKES
+      - name: RESOURCES
+      - name: SKILS
+      - name: USERREGISTRATIONS
+      - name: USERS

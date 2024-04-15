@@ -1,0 +1,157 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: "Table containing event details."
+    columns:
+      - name: _id
+        description: "The unique identifier for the event."
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "The name of the event."
+        tests:
+          - not_null
+      - name: location
+        description: "The location of the event."
+        tests:
+          - not_null
+      - name: seats
+        description: "The number of seats available for the event."
+        tests:
+          - not_null
+          
+      - name: date
+        description: "The date of the event."
+        tests:
+          - not_null
+          
+      - name: start_time
+        description: "The start time of the event."
+        tests:
+          - not_null
+          
+      - name: end_time
+        description: "The end time of the event."
+        tests:
+          - not_null
+          
+      - name: description
+        description: "A description of the event."
+
+
+  - name: stg_likes
+    description: "Table containing likes information for events."
+    columns:
+      - name: _id
+        description: "The unique identifier for the attendee."
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: "The email address of the attendee."
+        tests:
+          - not_null
+         
+      - name: eventId
+        description: "The unique identifier for the event the attendee is registered for."
+        tests:
+          - not_null
+          
+
+  - name: stg_resources
+    description: "Table containing resource information."
+    columns:
+      - name: _id
+        description: "The unique identifier for the resource."
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "The name of the resource."
+        tests:
+          - not_null
+      - name: description
+        description: "The description of the resource."
+      - name: type
+        description: "The type of the resource."
+      - name: externallink
+        description: "The external link associated with the resource."
+      - name: blogcontent
+        description: "The content of the resource if it is a blog."    
+
+  - name: stg_skills
+    description: "Table containing skills information."
+    columns:
+      - name: _id
+        description: "The unique identifier for the skill."
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: "The email address associated with the skill."
+        tests:
+          - not_null
+          
+      - name: skills
+        description: "The skills possessed by the individual."
+        tests:
+          - not_null     
+
+  - name: stg_userregistrations
+    description: "Table containing registration information for events."
+    columns:
+      - name: _id
+        description: "The unique identifier for the attendee."
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: "The email address of the attendee."
+        tests:
+          - not_null
+          
+      - name: eventId
+        description: "The unique identifier for the event the attendee is registered for."
+        tests:
+          - not_null
+              
+  - name: stg_users
+    description: "Table containing user information."
+    columns:
+      - name: _id
+        description: "The unique identifier for the user."
+        tests:
+          - unique
+          - not_null
+      - name: firstname
+        description: "The first name of the user."
+        tests:
+          - not_null
+      - name: lastname
+        description: "The last name of the user."
+        tests:
+          - not_null
+      - name: email
+        description: "The email address of the user."
+        tests:
+          - not_null
+          
+      - name: username
+        description: "The username of the user."
+        tests:
+          - not_null
+      - name: password
+        description: "The password of the user."
+        tests:
+          - not_null
+      - name: role
+        description: "The role of the user."
+        tests:
+          - not_null
+      - name: experience
+        description: "The experience data of the user."
+        tests:
+          - not_null
+                   
